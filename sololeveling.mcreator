@@ -1,24 +1,5 @@
 {
-  "mod_elements": [
-    {
-      "name": "Procedureteseforsololeveling",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "procedureteseforsololeveling",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/sololeveling/procedures/ProcedureteseforsololevelingProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    }
-  ],
+  "mod_elements": [],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {},
