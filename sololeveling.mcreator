@@ -1,0 +1,52 @@
+{
+  "mod_elements": [
+    {
+      "name": "Procedureteseforsololeveling",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "procedureteseforsololeveling",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sololeveling/procedures/ProcedureteseforsololevelingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {}
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "sololeveling",
+    "modName": "Solo-leveling",
+    "version": "1.0.0",
+    "author": "User, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.sololeveling"
+  },
+  "mcreatorVersion": 202400452410
+}
