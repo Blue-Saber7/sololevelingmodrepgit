@@ -9,27 +9,27 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
-import net.mcreator.sololeveling.entity.model.GateblueModel;
-import net.mcreator.sololeveling.entity.layer.GateblueLayer;
-import net.mcreator.sololeveling.entity.GateblueEntity;
+import net.mcreator.sololeveling.entity.model.GateredModel;
+import net.mcreator.sololeveling.entity.layer.GateredLayer;
+import net.mcreator.sololeveling.entity.GateredEntity;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class GateblueRenderer extends GeoEntityRenderer<GateblueEntity> {
-	public GateblueRenderer(EntityRendererProvider.Context renderManager) {
-		super(renderManager, new GateblueModel());
+public class GateredRenderer extends GeoEntityRenderer<GateredEntity> {
+	public GateredRenderer(EntityRendererProvider.Context renderManager) {
+		super(renderManager, new GateredModel());
 		this.shadowRadius = 0f;
-		this.addRenderLayer(new GateblueLayer(this));
+		this.addRenderLayer(new GateredLayer(this));
 	}
 
 	@Override
-	public RenderType getRenderType(GateblueEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
+	public RenderType getRenderType(GateredEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
 		return RenderType.entityTranslucent(getTextureLocation(animatable));
 	}
 
 	@Override
-	public void preRender(PoseStack poseStack, GateblueEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green,
+	public void preRender(PoseStack poseStack, GateredEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green,
 			float blue, float alpha) {
 		float scale = 1f;
 		this.scaleHeight = scale;
@@ -38,7 +38,7 @@ public class GateblueRenderer extends GeoEntityRenderer<GateblueEntity> {
 	}
 
 	@Override
-	protected float getDeathMaxRotation(GateblueEntity entityLivingBaseIn) {
+	protected float getDeathMaxRotation(GateredEntity entityLivingBaseIn) {
 		return 0.0F;
 	}
 }

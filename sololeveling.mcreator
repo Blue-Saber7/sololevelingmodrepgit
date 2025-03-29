@@ -15,6 +15,84 @@
           "src/main/java/net/mcreator/sololeveling/client/renderer/GateblueRenderer.java"
         ]
       }
+    },
+    {
+      "name": "GateblueOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gateblue_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sololeveling/procedures/GateblueOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gatered",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gatered",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sololeveling/models/item/gatered_spawn_egg.json",
+          "src/main/java/net/mcreator/sololeveling/entity/layer/GateredLayer.java",
+          "src/main/java/net/mcreator/sololeveling/entity/GateredEntity.java",
+          "src/main/java/net/mcreator/sololeveling/client/renderer/GateredRenderer.java",
+          "src/main/java/net/mcreator/sololeveling/entity/model/GateredModel.java"
+        ]
+      }
+    },
+    {
+      "name": "Gateredoninitialspawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gateredoninitialspawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sololeveling/procedures/GateredoninitialspawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GatebluePlayerCollidesWithThisEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gateblue_player_collides_with_this_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/sololeveling/procedures/GatebluePlayerCollidesWithThisEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -23,7 +101,9 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "entity.sololeveling.gatered": "Gate (Red)",
       "entity.sololeveling.gateblue": "Gate (Blue)",
+      "item.sololeveling.gatered_spawn_egg": "Gate (Red) Spawn Egg",
       "item.sololeveling.gateblue_spawn_egg": "Gate (Blue) Spawn Egg"
     }
   },

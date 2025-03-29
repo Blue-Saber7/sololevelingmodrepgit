@@ -4,21 +4,21 @@ import software.bernie.geckolib.model.GeoModel;
 
 import net.minecraft.resources.ResourceLocation;
 
-import net.mcreator.sololeveling.entity.GateblueEntity;
+import net.mcreator.sololeveling.entity.GateredEntity;
 
-public class GateblueModel extends GeoModel<GateblueEntity> {
+public class GateredModel extends GeoModel<GateredEntity> {
 	@Override
-	public ResourceLocation getAnimationResource(GateblueEntity entity) {
+	public ResourceLocation getAnimationResource(GateredEntity entity) {
 		return new ResourceLocation("sololeveling", "animations/gate_bluefix1.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelResource(GateblueEntity entity) {
+	public ResourceLocation getModelResource(GateredEntity entity) {
 		return new ResourceLocation("sololeveling", "geo/gate_bluefix1.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(GateblueEntity entity) {
+	public ResourceLocation getTextureResource(GateredEntity entity) {
 		return new ResourceLocation("sololeveling", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

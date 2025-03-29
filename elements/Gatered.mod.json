@@ -2,10 +2,10 @@
   "_fv": 73,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Gate (Blue)",
+    "mobName": "Gate (Red)",
     "mobLabel": "",
-    "mobModelTexture": "blue_portal.png",
-    "mobModelGlowTexture": "e_blue_portal.png",
+    "mobModelTexture": "red_portal.png",
+    "mobModelGlowTexture": "red_portal.png",
     "visualScale": {
       "fixedValue": 1.0
     },
@@ -20,11 +20,11 @@
     "stepHeight": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -16737844,
+      "value": -3407872,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -16711732,
+      "value": -3407719,
       "falpha": 0.0
     },
     "creativeTabs": [
@@ -110,7 +110,7 @@
       "name": "GatebluePlayerCollidesWithThisEntity"
     },
     "onInitialSpawn": {
-      "name": "GateblueOnInitialEntitySpawn"
+      "name": "Gateredoninitialspawn"
     },
     "hasAI": false,
     "aiBase": "(none)",

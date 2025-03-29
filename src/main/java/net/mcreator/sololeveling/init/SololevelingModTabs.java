@@ -23,6 +23,7 @@ public class SololevelingModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(SololevelingModItems.GATEBLUE_SPAWN_EGG.get());
+			tabData.accept(SololevelingModItems.GATERED_SPAWN_EGG.get());
 		}
 	}
 }

@@ -38,27 +38,27 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
+import net.mcreator.sololeveling.procedures.GateredoninitialspawnProcedure;
 import net.mcreator.sololeveling.procedures.GatebluePlayerCollidesWithThisEntityProcedure;
-import net.mcreator.sololeveling.procedures.GateblueOnInitialEntitySpawnProcedure;
 import net.mcreator.sololeveling.init.SololevelingModEntities;
 
 import javax.annotation.Nullable;
 
-public class GateblueEntity extends Monster implements GeoEntity {
-	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(GateblueEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(GateblueEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(GateblueEntity.class, EntityDataSerializers.STRING);
+public class GateredEntity extends Monster implements GeoEntity {
+	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(GateredEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(GateredEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(GateredEntity.class, EntityDataSerializers.STRING);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
 
-	public GateblueEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(SololevelingModEntities.GATEBLUE.get(), world);
+	public GateredEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(SololevelingModEntities.GATERED.get(), world);
 	}
 
-	public GateblueEntity(EntityType<GateblueEntity> type, Level world) {
+	public GateredEntity(EntityType<GateredEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(true);
@@ -71,7 +71,7 @@ public class GateblueEntity extends Monster implements GeoEntity {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "blue_portal");
+		this.entityData.define(TEXTURE, "red_portal");
 	}
 
 	public void setTexture(String texture) {
@@ -110,7 +110,7 @@ public class GateblueEntity extends Monster implements GeoEntity {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		GateblueOnInitialEntitySpawnProcedure.execute(world, this);
+		GateredoninitialspawnProcedure.execute(world, this);
 		return retval;
 	}
 
@@ -187,7 +187,7 @@ public class GateblueEntity extends Monster implements GeoEntity {
 	protected void tickDeath() {
 		++this.deathTime;
 		if (this.deathTime == 20) {
-			this.remove(GateblueEntity.RemovalReason.KILLED);
+			this.remove(GateredEntity.RemovalReason.KILLED);
 			this.dropExperience();
 		}
 	}

@@ -1,4 +1,6 @@
 {
+  "entity.sololeveling.gatered": "Gate (Red)",
   "entity.sololeveling.gateblue": "Gate (Blue)",
+  "item.sololeveling.gatered_spawn_egg": "Gate (Red) Spawn Egg",
   "item.sololeveling.gateblue_spawn_egg": "Gate (Blue) Spawn Egg"
 }
