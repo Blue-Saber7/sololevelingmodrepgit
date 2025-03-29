@@ -17,6 +17,10 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.sololeveling.init.SololevelingModTabs;
+import net.mcreator.sololeveling.init.SololevelingModItems;
+import net.mcreator.sololeveling.init.SololevelingModEntities;
+
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
@@ -36,6 +40,11 @@ public class SololevelingMod {
 		// End of user code block mod constructor
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+		SololevelingModItems.REGISTRY.register(bus);
+		SololevelingModEntities.REGISTRY.register(bus);
+
+		SololevelingModTabs.REGISTRY.register(bus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

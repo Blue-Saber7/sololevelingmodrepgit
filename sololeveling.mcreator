@@ -1,11 +1,31 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "Gateblue",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gateblue",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sololeveling/models/item/gateblue_spawn_egg.json",
+          "src/main/java/net/mcreator/sololeveling/entity/model/GateblueModel.java",
+          "src/main/java/net/mcreator/sololeveling/entity/GateblueEntity.java",
+          "src/main/java/net/mcreator/sololeveling/entity/layer/GateblueLayer.java",
+          "src/main/java/net/mcreator/sololeveling/client/renderer/GateblueRenderer.java"
+        ]
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "entity.sololeveling.gateblue": "Gate (Blue)",
+      "item.sololeveling.gateblue_spawn_egg": "Gate (Blue) Spawn Egg"
+    }
   },
   "foldersRoot": {
     "name": "~",
