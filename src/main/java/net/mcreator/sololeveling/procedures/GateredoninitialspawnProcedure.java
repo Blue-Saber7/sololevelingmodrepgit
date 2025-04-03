@@ -7,9 +7,6 @@ import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.tags.TagKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.registries.Registries;
 
 import net.mcreator.sololeveling.entity.GateredEntity;
 import net.mcreator.sololeveling.SololevelingMod;
@@ -30,15 +27,13 @@ public class GateredoninitialspawnProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("sololeveling:gatered")))) {
-			if (entity instanceof GateredEntity) {
-				((GateredEntity) entity).setAnimation("animation.model.portalspinfast");
-			}
-			SololevelingMod.queueServerWork(80, () -> {
-				if (entity instanceof GateredEntity) {
-					((GateredEntity) entity).setAnimation("empty");
-				}
-			});
+		if (entity instanceof GateredEntity) {
+			((GateredEntity) entity).setAnimation("animation.model.portalspinfast");
 		}
+		SololevelingMod.queueServerWork(80, () -> {
+			if (entity instanceof GateredEntity) {
+				((GateredEntity) entity).setAnimation("empty");
+			}
+		});
 	}
 }

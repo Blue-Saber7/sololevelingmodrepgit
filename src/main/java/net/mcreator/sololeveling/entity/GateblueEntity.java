@@ -141,7 +141,7 @@ public class GateblueEntity extends Monster implements GeoEntity {
 	@Override
 	public void playerTouch(Player sourceentity) {
 		super.playerTouch(sourceentity);
-		GatebluePlayerCollidesWithThisEntityProcedure.execute(this);
+		GatebluePlayerCollidesWithThisEntityProcedure.execute(this.level());
 	}
 
 	public static void init() {
